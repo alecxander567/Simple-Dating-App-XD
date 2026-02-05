@@ -593,8 +593,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  .chat-input-container {
-    width: 95%;
+  @media (max-width: 768px) {
+    .chat-input-container {
+      left: 48%;
+      transform: translateX(-50%);
+    }
   }
 
   .chat-input-group {
