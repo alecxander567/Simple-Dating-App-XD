@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+      <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Moon -->
+    <div class="moon"></div>
+
+    <!-- Stars -->
+    <div class="stars"></div>
+
+    <!-- Grass -->
+    <div class="grass">
+      <!-- Grass blades -->
+      <div class="grass-blade" style="left: 5%; height: 25px"></div>
+      <div class="grass-blade" style="left: 10%; height: 30px"></div>
+      <div class="grass-blade" style="left: 15%; height: 20px"></div>
+      <div class="grass-blade" style="left: 20%; height: 28px"></div>
+      <div class="grass-blade" style="left: 25%; height: 22px"></div>
+      <div class="grass-blade" style="left: 30%; height: 26px"></div>
+      <div class="grass-blade" style="left: 35%; height: 24px"></div>
+      <div class="grass-blade" style="left: 40%; height: 29px"></div>
+      <div class="grass-blade" style="left: 45%; height: 21px"></div>
+      <div class="grass-blade" style="left: 50%; height: 27px"></div>
+      <div class="grass-blade" style="left: 55%; height: 23px"></div>
+      <div class="grass-blade" style="left: 60%; height: 25px"></div>
+      <div class="grass-blade" style="left: 65%; height: 28px"></div>
+      <div class="grass-blade" style="left: 70%; height: 22px"></div>
+      <div class="grass-blade" style="left: 75%; height: 30px"></div>
+      <div class="grass-blade" style="left: 80%; height: 24px"></div>
+      <div class="grass-blade" style="left: 85%; height: 26px"></div>
+      <div class="grass-blade" style="left: 90%; height: 20px"></div>
+      <div class="grass-blade" style="left: 95%; height: 25px"></div>
+      <div class="grass-blade" style="left: 8%; height: 27px"></div>
+      <div class="grass-blade" style="left: 18%; height: 24px"></div>
+      <div class="grass-blade" style="left: 28%; height: 29px"></div>
+      <div class="grass-blade" style="left: 38%; height: 21px"></div>
+      <div class="grass-blade" style="left: 48%; height: 26px"></div>
+      <div class="grass-blade" style="left: 58%; height: 23px"></div>
+      <div class="grass-blade" style="left: 68%; height: 28px"></div>
+      <div class="grass-blade" style="left: 78%; height: 25px"></div>
+      <div class="grass-blade" style="left: 88%; height: 22px"></div>
+    </div>
+
+    <!-- Valentine Title -->
+    <div class="valentine-title">
+      <h1>Will You Be My Valentine? 💕</h1>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button class="btn btn-yes" onclick="handleYes()">Yes! 💖</button>
+      <button class="btn btn-no" onclick="handleNo()">No</button>
+    </div>
+
+    <!-- People -->
+    <div class="people">
+      <div class="boy">
+        <div class="boy-body"></div>
+        <div class="boy-arm-left"></div>
+        <div class="boy-arm-right"></div>
+        <div class="boy-leg-left"></div>
+        <div class="boy-leg-right"></div>
+      </div>
+      <div class="girl">
+        <div class="girl-body"></div>
+        <div class="girl-arm-left"></div>
+        <div class="girl-arm-right"></div>
+        <div class="girl-leg-left"></div>
+        <div class="girl-leg-right"></div>
+      </div>
+    </div>
+
+    <!-- Flowers on the left side -->
+    <div
+      class="flowers-left"
+      style="position: absolute; left: 50px; bottom: 50px; z-index: 3">
+      <div class="flower-stem">
+        <div class="flower-bloom">
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-center"></div>
+        </div>
+        <div class="flower-leaf"></div>
+        <div class="flower-leaf"></div>
+      </div>
+      <div class="flower-stem">
+        <div class="flower-bloom">
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-center"></div>
+        </div>
+        <div class="flower-leaf"></div>
+        <div class="flower-leaf"></div>
+      </div>
+    </div>
+
+    <!-- Flowers on the right side -->
+    <div class="flowers-right">
+      <div class="flower-stem">
+        <div class="flower-bloom">
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-center"></div>
+        </div>
+        <div class="flower-leaf"></div>
+        <div class="flower-leaf"></div>
+      </div>
+      <div class="flower-stem">
+        <div class="flower-bloom">
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-center"></div>
+        </div>
+        <div class="flower-leaf"></div>
+        <div class="flower-leaf"></div>
+      </div>
+      <div class="flower-stem">
+        <div class="flower-bloom">
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-petal"></div>
+          <div class="flower-center"></div>
+        </div>
+        <div class="flower-leaf"></div>
+        <div class="flower-leaf"></div>
+      </div>
+    </div>
+
+    <!-- Ground flowers -->
+    <div class="flowers-ground">
+      <div class="flower" style="left: 10%; bottom: 50px"></div>
+      <div class="flower" style="left: 15%; bottom: 45px"></div>
+      <div class="flower" style="left: 22%; bottom: 55px"></div>
+      <div class="flower" style="left: 28%; bottom: 48px"></div>
+      <div class="flower" style="left: 35%; bottom: 52px"></div>
+      <div class="flower" style="left: 42%; bottom: 50px"></div>
+      <div class="flower" style="left: 58%; bottom: 53px"></div>
+      <div class="flower" style="left: 65%; bottom: 47px"></div>
+      <div class="flower" style="left: 72%; bottom: 51px"></div>
+      <div class="flower" style="left: 78%; bottom: 49px"></div>
+      <div class="flower" style="left: 85%; bottom: 54px"></div>
+      <div class="flower" style="left: 90%; bottom: 46px"></div>
+    </div>
+
+    <!-- Fireflies -->
+    <div class="fireflies">
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function handleYes() {
+        // Redirect to chat room
+        window.location.href = "./chatroom.html";
+      }
+
+      function handleNo() {
+        const noBtn = event.target;
+        // Move the "No" button randomly
+        const randomX = Math.random() * (window.innerWidth - 200);
+        const randomY = Math.random() * (window.innerHeight - 100);
+        noBtn.style.position = "fixed";
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+      }
+    </script>
+  </body>
+</html>

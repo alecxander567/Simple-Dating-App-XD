@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Chat Room</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link href="chat-room.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wall">
+      <div class="wall-art"></div>
+      <div class="window"></div>
+    </div>
+
+    <button class="menu-button" onclick="openMenu()">🍽️ Menu</button>
+
+    <button class="leave-button" onclick="leaveDate()">🚪 Leave Date</button>
+
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+    <div class="menu-modal" id="menuModal">
+      <span class="close-menu" onclick="closeMenu()">✕</span>
+      <h2 class="menu-title">🍽️ Food Menu</h2>
+      <div class="menu-items">
+        <div class="menu-item" onclick="orderFood('spaghetti')">
+          <span class="menu-item-name">Spaghetti</span>
+          <span class="menu-item-icon">🍝</span>
+        </div>
+        <div class="menu-item" onclick="orderFood('steak')">
+          <span class="menu-item-name">Steak</span>
+          <span class="menu-item-icon">🥩</span>
+        </div>
+        <div class="menu-item" onclick="orderFood('lobster')">
+          <span class="menu-item-name">Lobster</span>
+          <span class="menu-item-icon">🦞</span>
+        </div>
+        <div class="menu-item" onclick="orderFood('salad')">
+          <span class="menu-item-name">Salad</span>
+          <span class="menu-item-icon">🥗</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="menu-overlay"
+      id="leaveOverlay"
+      onclick="closeLeaveModal()"></div>
+    <div class="leave-modal" id="leaveModal">
+      <div class="leave-modal-icon">💔</div>
+      <h2 class="leave-modal-title">Leave Date?</h2>
+      <p class="leave-modal-text">Are you sure you want to end this date?</p>
+      <div class="leave-modal-buttons">
+        <button class="btn-cancel" onclick="closeLeaveModal()">Stay</button>
+        <button class="btn-confirm-leave" onclick="confirmLeave()">
+          Leave
+        </button>
+      </div>
+    </div>
+
+    <div class="floor"></div>
+
+    <div class="table-restaurant">
+      <div class="table-top"></div>
+      <div class="table-leg"></div>
+    </div>
+
+    <div class="chair chair-left">
+      <div class="chair-back"></div>
+      <div class="chair-seat"></div>
+      <div class="chair-leg"></div>
+      <div class="chair-leg"></div>
+    </div>
+    <div class="chair chair-right">
+      <div class="chair-back"></div>
+      <div class="chair-seat"></div>
+      <div class="chair-leg"></div>
+      <div class="chair-leg"></div>
+    </div>
+
+    <div class="character character-boy">
+      <div class="roblox-head">
+        <div class="roblox-hair-boy"></div>
+        <div class="roblox-face">
+          <div class="roblox-eye roblox-eye-left"></div>
+          <div class="roblox-eye roblox-eye-right"></div>
+          <div class="roblox-mouth"></div>
+        </div>
+      </div>
+      <div class="roblox-torso roblox-torso-boy"></div>
+      <div class="roblox-arm roblox-arm-boy roblox-arm-left"></div>
+      <div class="roblox-arm roblox-arm-boy roblox-arm-right"></div>
+      <div class="roblox-leg roblox-leg-boy roblox-leg-left"></div>
+      <div class="roblox-leg roblox-leg-boy roblox-leg-right"></div>
+    </div>
+
+    <div class="character character-girl">
+      <div class="roblox-head">
+        <div class="roblox-hair-girl"></div>
+        <div class="roblox-face">
+          <div class="roblox-eye roblox-eye-left"></div>
+          <div class="roblox-eye roblox-eye-right"></div>
+          <div class="roblox-mouth"></div>
+        </div>
+      </div>
+      <div class="roblox-torso roblox-torso-girl"></div>
+      <div class="roblox-arm roblox-arm-girl roblox-arm-left"></div>
+      <div class="roblox-arm roblox-arm-girl roblox-arm-right"></div>
+      <div class="roblox-leg roblox-leg-girl roblox-leg-left"></div>
+      <div class="roblox-leg roblox-leg-girl roblox-leg-right"></div>
+    </div>
+
+    <div class="chat-input-container">
+      <div class="chat-input-group">
+        <input
+          type="text"
+          class="chat-input"
+          id="messageInput"
+          placeholder="Type your message..." />
+        <button class="btn-send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat-room.js"></script>
+  </body>
+</html>
