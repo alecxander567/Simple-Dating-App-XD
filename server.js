@@ -47,3 +47,7 @@ io.on("connection", (socket) => {
     connectedUsers = connectedUsers.filter((user) => user.id !== socket.id);
   });
 });
+
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
