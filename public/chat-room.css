@@ -1115,3 +1115,14 @@ body.flip-view .food-plate-girl {
     left: calc(50% - 150px);
   }
 }
+
+@media (max-width: 480px) {
+  .chat-input {
+    flex: 1 1 auto;
+  }
+
+  .btn-send {
+    flex-shrink: 0;
+    padding: 10px 20px;
+  }
+}
