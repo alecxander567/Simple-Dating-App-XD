@@ -557,10 +557,10 @@ body {
 .chat-input-group {
   display: flex;
   background: rgba(255, 255, 255, 0.95);
-  padding: 15px 25px 15px 15px;
+  padding: 15px 20px; /* increased right padding */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  gap: 0;
+  gap: 10px; /* space between input and button */
 }
 
 .chat-input {
@@ -585,7 +585,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .btn-send:hover {
@@ -594,21 +594,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-    .chat-input-container {
-      left: 48%;
-      transform: translateX(-50%);
-    }
-  }
-
   .chat-input-group {
-    padding: 12px;
+    padding: 12px 15px;
   }
 
-  @media (max-width: 768px) {
-    .btn-send {
-      margin-left: -10px;
-    }
+  .btn-send {
+    padding: 10px 15px;
   }
 }
 
@@ -1127,12 +1118,11 @@ body.flip-view .food-plate-girl {
 }
 
 @media (max-width: 480px) {
-  .chat-input {
-    flex: 1 1 auto;
+  .chat-input-group {
+    padding: 10px 12px;
   }
 
   .btn-send {
-    flex-shrink: 0;
-    padding: 10px 20px;
+    padding: 8px 12px;
   }
 }
