@@ -48,6 +48,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
